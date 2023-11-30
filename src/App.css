@@ -40,3 +40,7 @@
 #sam{
   color: rgb(255, 8, 8);
 }
+
+.btn-outline-success{
+  background-color: yellowgreen;
+}
