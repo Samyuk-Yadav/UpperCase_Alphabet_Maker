@@ -1,24 +1,30 @@
-import logo from "./logo.svg";
+
 import "./App.css";
+
+let name = "Samyuk";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <>
+      <nav id="sam">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </nav>
+      <div className="container">
+        <h1>Hello {name}</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
+          consectetur tempore rerum similique est possimus ut nam mollitia iure
+          natus! Veritatis atque sed reprehenderit nihil. Quaerat illum ad dicta
+          illo soluta deserunt, quo pariatur.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React with Samyuk.
-        </a>
-      </header>
-    </div>
+        <img
+          src="https://miro.medium.com/v2/resize:fit:800/1*VFStJoxV3Wa8Ees7ZtnN7A.png"
+          alt="React"
+        />
+      </div>
+    </>
   );
 }
 
