@@ -5,19 +5,23 @@ export default function TextForm(props) {
     const handleUpClick = ()=> {
         let newtext = text.toUpperCase();
         setText(newtext)
+        props.showAlert("Converted to uppercase!", "success");
     };
     const handleLowClick = () => {
       let newtext = text.toLowerCase();
       setText(newtext);
+      props.showAlert("Converted to lowercase!", "success");
     };
     const handleClearClick = () => {
       let newtext = '';
       setText(newtext);
+      props.showAlert("Cleared Text!", "success");
     };
     const handleCopyClick = () => {
       const text = document.getElementById("myBox");
       text.select();
       navigator.clipboard.writeText(text.value);
+      props.showAlert("Copied to Clipboard!", "success");
     };
     const handleOnChange = (event) => {
       setText(event.target.value)
@@ -58,10 +62,10 @@ export default function TextForm(props) {
       <div className="container my-5" style={{color: props.mode==='dark'?'white':'black'}}>
         <h1>Your text summary</h1>
         <p>
-          {text.split(" ").length - 1} words, {text.length} character
+          {text.split(/\s+/).filter(word=> word!=="").length} words, {text.length} character
         </p>
         <p>
-          {0.008 * text.split(" ").length}
+          {0.008 * text.split("").length}
           <b> Minutes </b>for reading
         </p>
         <h2>Preview</h2>
